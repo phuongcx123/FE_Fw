@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-view></div>
+
+
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="controllers/ListController.js"></script>
+    <script src="controllers/AddController.js"></script>
+    <script src="controllers/detaiController.js"></script>
+    <script src="controllers/editController.js"></script>
+    <script>
+        var myApp = angular.module('myApp', ['ngRoute'])
+        myApp.config(function($routeProvider) {
+            $routeProvider
+                .when('/banghe', {
+                    templateUrl: 'views/list.html',
+                    controller: ListController
+                })
+                .when('/banghe/add', {
+                    templateUrl: 'views/add.html',
+                    controller: AddController
+                })
+                .when('/detail/banghe/:id', {
+                    templateUrl: 'views/detail.html',
+                    controller: detaiController
+                })
+                .when('/update/banghe/:id', {
+                    templateUrl: 'views/edit.html',
+                    controller: editController
+                })
+                .otherwise({
+                    redirectTo: "/banghe"
+                })
+        })
+    </script>
+</body>
+
+</html>

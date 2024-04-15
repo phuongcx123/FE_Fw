@@ -1,0 +1,31 @@
+<div class="w-50 m-auto mt-5">
+    <h1 class="text-center text-uppercase">{{title}}</h1>
+    <form>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Tên</label>
+            <input type="text" class="form-control" id="name" ng-model="data.name">
+            <span class="text-danger" ng-show="vaildate.name">{{tb.name}}</span>
+        </div>
+        <div class="mb-3">
+            <label for="size" class="form-label">Kích thước:</label>
+            <select class="form-select" aria-label="Default select example" ng-model="data.size">
+                <option value="" hidden>Chọn kích thước</option>
+                <option value="1">80x160x75</option>
+                <option value="2">90x180x60</option>
+                <option value="3">85x180x70</option>
+            </select>
+            <span class="text-danger" ng-show="vaildate.size">{{tb.size}}</span>
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Giá:</label>
+            <input type="text" class="form-control" id="price" ng-model="data.price">
+            <span class="text-danger" ng-show="vaildate.price">{{tb.price}}</span>
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-success" ng-click="add()">Thêm</button>
+        </div>
+    </form>
+</div>

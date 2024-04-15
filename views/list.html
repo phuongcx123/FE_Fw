@@ -1,0 +1,32 @@
+<div class=" mt-5">
+    <h1 class="text-center text-uppercase">{{title}}</h1>
+    <div class="text-end">
+        <a class="btn btn-success" href="#!/banghe/add ">Thêm</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Kích thước</th>
+                <th scope="col">Giá</th>
+                <th scope="col">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="table in listTables">
+                <th scope="row"> {{ $index + 1}} </th>
+                <td>{{table.name}}</td>
+                <td ng-if="table.size == 1">80x160x75</td>
+                <td ng-if="table.size == 2">90x180x60</td>
+                <td ng-if="table.size == 3">85x180x70</td>
+                <td>{{table.price}}</td>
+                <td>
+                    <a href="#!/detail/banghe/{{table.id}}" class="btn btn-primary">Chi tiết</a>
+                    <a href="#!/update/banghe/{{table.id}}" class="btn btn-warning">Sửa</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

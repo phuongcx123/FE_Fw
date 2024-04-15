@@ -1,0 +1,34 @@
+{
+  "tables": [
+    {
+      "id": "1",
+      "name": "Bô bàn ăn mặt đá",
+      "size": 1,
+      "price": 13000000
+    },
+    {
+      "id": "2",
+      "name": "Bộ bàn ghế phòng ăn thông minh",
+      "size": 2,
+      "price": 18000000
+    },
+    {
+      "id": "9b88",
+      "name": "1232341",
+      "size": 2,
+      "price": 123
+    },
+    {
+      "id": "c1ae",
+      "name": "1234567891",
+      "size": 2,
+      "price": null
+    },
+    {
+      "id": "c527",
+      "name": "1234567891",
+      "size": 1,
+      "price": 100
+    }
+  ]
+}
